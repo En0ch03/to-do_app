@@ -12,4 +12,5 @@ export default function Index() {
       </View>
     </SafeAreaView>
   );
+  // Add your other components here
 }
