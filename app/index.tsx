@@ -1,15 +1,15 @@
-import { Text, View } from "react-native";
+import { Text, View, SafeAreaView } from "react-native";
+import Header from "../src/components/header";
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Hello</Text>
-    </View>
+    <SafeAreaView>
+      <Header title="My Todo App" />
+      <Text>Welcome to the home page</Text>
+
+      <View>
+        <Text>Hello</Text>
+      </View>
+    </SafeAreaView>
   );
 }
