@@ -4,7 +4,7 @@ import { colors } from "@/src/utils/constants";
 const styles = StyleSheet.create({
   wrapper: {
     marginHorizontal: 20,
-    marginVertical: 10,
+    marginVertical: 20,
   },
   input: {
     borderWidth: 1,

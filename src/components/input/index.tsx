@@ -3,10 +3,19 @@ import styles from "./style";
 import { View, TextInput } from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
 
-const Input = ({ placeholder = "Write Something To Do" }) => {
+const Input = ({
+  placeholder = "Write Something To Do",
+  keyboardType = "default",
+  multiline = false,
+}) => {
   return (
     <View>
-      <TextInput style={styles.input} placeholder={placeholder} />
+      <TextInput
+        keyboardType={keyboardType as any}
+        style={styles.input}
+        placeholder={placeholder}
+        multiline={multiline}
+      />
     </View>
   );
 };
