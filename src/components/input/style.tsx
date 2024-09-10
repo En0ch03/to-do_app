@@ -3,16 +3,31 @@ import { colors } from "@/src/utils/constants";
 
 const styles = StyleSheet.create({
   wrapper: {
-    marginHorizontal: 20,
-    marginVertical: 20,
+    flexDirection: "row-reverse",
+    marginTop: 20,
+    backgroundColor: colors.arkaplan,
+    borderRadius: 100,
+    padding: 20,
+
+    marginLeft: 10,
   },
   input: {
-    borderWidth: 1,
-    borderColor: colors.textPrimary,
-    paddingHorizontal: 40,
-    paddingVertical: 10,
+    width: "82%",
+    borderWidth: 2,
+    borderColor: colors.bgPrimary,
+    paddingHorizontal: 20,
+    backgroundColor: colors.bgSecondry,
+    paddingVertical: 5,
     borderRadius: 100,
     fontSize: 20,
+    marginRight: 10,
+    marginLeft: 10,
+  },
+  icon: {
+    fontSize: 40,
+    color: colors.bgPrimary,
+
+    marginTop: 2,
   },
 });
 

@@ -1,5 +1,5 @@
 import { Text, View, SafeAreaView } from "react-native";
-import Header from "../src/components/header";
+import Header from "../src/components/header/index";
 import generatedStyles from "../src/utils/generalStyles";
 import generalStyles from "../src/utils/generalStyles";
 import Input from "@/src/components/input";

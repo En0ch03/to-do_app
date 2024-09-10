@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./style";
-import { View, TextInput } from "react-native";
+import { View, TextInput, TouchableOpacity } from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
 
 const Input = ({
@@ -9,13 +9,16 @@ const Input = ({
   multiline = false,
 }) => {
   return (
-    <View>
+    <View style={styles.wrapper}>
       <TextInput
         keyboardType={keyboardType as any}
         style={styles.input}
         placeholder={placeholder}
         multiline={multiline}
       />
+      <TouchableOpacity>
+        <AntDesign name="pluscircleo" style={styles.icon} />
+      </TouchableOpacity>
     </View>
   );
 };
