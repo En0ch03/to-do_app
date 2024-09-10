@@ -8,11 +8,11 @@ const styles = StyleSheet.create({
     backgroundColor: colors.arkaplan,
     borderRadius: 100,
     padding: 20,
-
-    marginLeft: 10,
+    marginRight: 5,
+    marginLeft: 5,
   },
   input: {
-    width: "82%",
+    width: "85%",
     borderWidth: 2,
     borderColor: colors.bgPrimary,
     paddingHorizontal: 20,
@@ -20,14 +20,16 @@ const styles = StyleSheet.create({
     paddingVertical: 5,
     borderRadius: 100,
     fontSize: 20,
-    marginRight: 10,
+    marginRight: 2,
     marginLeft: 10,
   },
   icon: {
     fontSize: 40,
     color: colors.bgPrimary,
-
     marginTop: 2,
+  },
+  head: {
+    color: colors.bgHead,
   },
 });
 

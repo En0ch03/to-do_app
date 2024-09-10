@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   headerWrapper: {
     width: "100%",
     height: 50,
-    backgroundColor: colors.bgPrimary,
+    backgroundColor: colors.bgHead,
     justifyContent: "center",
     alignContent: "center",
   },

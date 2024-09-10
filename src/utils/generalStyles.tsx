@@ -5,7 +5,7 @@ const generalStyles = StyleSheet.create({
     flex: 1,
   },
   bgwhite: {
-    backgroundColor: "#ffffff",
+    backgroundColor: "#FFF5E4",
   },
 });
 

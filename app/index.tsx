@@ -1,9 +1,9 @@
 import { Text, View, SafeAreaView, StyleSheet, ScrollView } from "react-native";
-import Header from "../src/components/header/index";
 import { colors } from "../src/utils/constants";
 import generalStyles from "../src/utils/generalStyles";
 import Input from "@/src/components/input";
 import { useState } from "react";
+import Todo from "@/src/components/todo";
 export default function Index() {
   const [text, setText] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>([]);
@@ -37,10 +37,12 @@ export default function Index() {
       />
       <View style={styles.todosWrapper}>
         {todos.length === 0 ? (
-          <Text style={styles.emptyText}>Kayıt Yok</Text>
+          <Text style={styles.emptyText}>There is nothing to do !</Text>
         ) : (
           <ScrollView style={styles.scrollView}>
-            <Text>Dolu</Text>
+            {todos?.map((todo) => (
+              <Todo key={todo?.id} todo={todo} />
+            ))}
           </ScrollView>
         )}
       </View>

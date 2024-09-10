@@ -4,4 +4,5 @@ export const colors = {
   textSecondary: "#F5F5F5",
   bgSecondry: "#C7FFD8",
   arkaplan: "#FFD7C4",
+  bgHead: "#1E2A5E",
 };
