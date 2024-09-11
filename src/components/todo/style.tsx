@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
     fontStyle: "italic",
     fontSize: 15,
     flexDirection: "row",
+    fontWeight: "bold",
   },
   textwrapper: {
     flex: 1,
