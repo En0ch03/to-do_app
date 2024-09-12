@@ -1,5 +1,5 @@
 import { Stack } from "expo-router";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Platform } from "react-native";
 
 export default function RootLayout() {
   return (
@@ -10,9 +10,11 @@ export default function RootLayout() {
         headerTintColor: "#F5F5F5",
         headerTitleStyle: {
           fontWeight: "bold",
-          fontFamily: "Georgia",
+          fontFamily: Platform.OS === "android" ? "serif" : "Georgia",
           fontSize: 20,
         },
+
+        headerTitleAlign: "center",
       }}
     ></Stack>
   );

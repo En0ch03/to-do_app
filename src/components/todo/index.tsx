@@ -3,12 +3,13 @@ import { Text, View, TouchableOpacity } from "react-native";
 import { useState } from "react";
 import styles from "./style";
 import { colors } from "@/src/utils/constants";
-import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import Feather from "@expo/vector-icons/Feather";
 import AntDesign from "@expo/vector-icons/AntDesign";
 
 const Todo = ({
+  todos = [],
+  setTodos = () => {},
   todo = { text: "Not available", date: new Date(), completed: false },
 }) => {
   return (

@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
     padding: 20,
     marginRight: 5,
     marginLeft: 5,
+    marginBottom: -20,
   },
   input: {
     width: "85%",

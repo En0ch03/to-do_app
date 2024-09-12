@@ -4,16 +4,16 @@ import generalStyles from "../src/utils/generalStyles";
 import Input from "@/src/components/input";
 import { useState } from "react";
 import Todo from "@/src/components/todo";
+
+interface Todo {
+  id: string;
+  text: string;
+  date: Date;
+  completed: boolean;
+}
 export default function Index() {
   const [text, setText] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>([]);
-
-  interface Todo {
-    id: string;
-    text: string;
-    date: Date;
-    completed: boolean;
-  }
 
   const addTodo = () => {
     const newTodo = {
@@ -22,7 +22,7 @@ export default function Index() {
       date: new Date(),
       completed: false,
     };
-    setTodos([...todos, newTodo]);
+    setTodos([newTodo, ...todos]);
     setText("");
   };
 
@@ -30,7 +30,7 @@ export default function Index() {
     <SafeAreaView style={[generalStyles.flex1, generalStyles.bgwhite]}>
       <Input
         value={text}
-        onChangeText={(text: any) => setText(text)}
+        onChangeText={(text: string) => setText(text)}
         //onIconPress={() => Alert.alert("Task Added")}
         placeholder="Write Something To Do"
         onIconPress={addTodo}
@@ -41,14 +41,18 @@ export default function Index() {
         ) : (
           <ScrollView style={styles.scrollView}>
             {todos?.map((todo) => (
-              <Todo key={todo?.id} todo={todo} />
+              <Todo
+                todos={todos}
+                setTodos={setTodos}
+                key={todo?.id}
+                todo={todo}
+              />
             ))}
           </ScrollView>
         )}
       </View>
     </SafeAreaView>
   );
-  // Add your other components here
 }
 const styles = StyleSheet.create({
   todosWrapper: { flex: 1, marginHorizontal: 20, marginVertical: 30 },
@@ -57,6 +61,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     color: colors.bgPrimary,
+    marginTop: 20,
   },
   scrollView: {
     flexGrow: 1,
